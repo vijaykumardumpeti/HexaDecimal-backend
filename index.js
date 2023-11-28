@@ -15,9 +15,13 @@ const initilizeServer = ()=>{
 initilizeServer()
 
 app.get('/', (req, res)=>{
-    res.send({
+    try{
+        res.json({
         message: 'you are accessed hexdecimal assignment domain please give paths as per readmeFile'
     })
+    }catch(e){
+        console.log(e.message, e)
+    }
 })
 
 
