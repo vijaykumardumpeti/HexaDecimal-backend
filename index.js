@@ -14,6 +14,12 @@ const initilizeServer = ()=>{
 
 initilizeServer()
 
+app.get('/', (req, res)=>{
+    res.send({
+        message: 'you are accessed hexdecimal assignment domain please give paths as per readmeFile'
+    })
+})
+
 
 app.get('/v1/users', async (req, res)=>{
     const usersResponse  = await axios.get('https://jsonplaceholder.typicode.com/users')
